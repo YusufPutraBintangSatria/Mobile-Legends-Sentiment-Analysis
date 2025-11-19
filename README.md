@@ -126,6 +126,29 @@ Sebagai langkah menuju **Gen AI Engineer**, proyek ini memiliki potensi pengemba
 
 ---
 
+## ✨ Gen AI Experiment: Handling Sarcasm with Gemini 2.0 Flash
+
+Selain menggunakan metode Lexicon-based (InSet), saya melakukan eksperimen lanjutan menggunakan **Large Language Model (Google Gemini 2.0 Flash)** untuk menangani kelemahan metode tradisional, khususnya dalam mendeteksi **Sarkasme**.
+
+### Masalah pada Metode Lama (Lexicon)
+Metode Lexicon bekerja dengan mencocokkan kata. Kalimat yang mengandung kata positif ("Hebat", "Mantap") akan otomatis dianggap Positif, meskipun konteksnya menyindir.
+
+### Solusi dengan LLM
+LLM mampu memahami konteks kalimat secara utuh. Berikut adalah hasil komparasi pada sampel data:
+
+| Ulasan User | Label Lexicon (Metode Lama) | Label Gemini LLM (Metode Baru) | Analisis |
+| :--- | :---: | :---: | :--- |
+| *"Game seru banget, grafiknya hd!"* | ✅ Positif | ✅ Positif | Kedua metode setuju. |
+| *"Dasar moonton dark system..."* | ❌ Negatif | ✅ Negatif | Kedua metode setuju. |
+| **"Hebat banget sinyalnya, ping 200ms terus, mantap!"** | ⚠️ **Positif** (Salah Deteksi) | ✅ **Negatif** (Akurat) | **LLM berhasil mendeteksi sarkasme**, sedangkan Lexicon gagal karena ada kata "Hebat" & "Mantap". |
+
+**Bukti Eksekusi Code:**
+![Hasil LLM](images/llm_sarcasm_detection.png)
+
+> *Code eksperimen ini dapat dilihat pada file [`experiment_llm_labeling.py`](experiment_llm_labeling.py).*
+
+--- 
+
 ## 👤 Kontak
 **Bintang**
 * [LinkedIn](https://www.linkedin.com/in/yusuf-putra-bintang-satria-274a87388)
