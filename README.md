@@ -145,7 +145,7 @@ LLM mampu memahami konteks kalimat secara utuh. Berikut adalah hasil komparasi p
 **Bukti Eksekusi Code:**
 ![Hasil LLM](image/llm_sarcasm_detection.png)
 
-> *Code eksperimen ini dapat dilihat pada file [`experiment_llm_labeling.py`](experiment_llm_labeling.py).*
+> *Code eksperimen ini dapat dilihat pada file [`experiment_llm_labeling.ipynb`](experiment_llm_labeling.ipynb).*
 
 --- 
 
