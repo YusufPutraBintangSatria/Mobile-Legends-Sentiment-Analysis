@@ -143,7 +143,7 @@ LLM mampu memahami konteks kalimat secara utuh. Berikut adalah hasil komparasi p
 | **"Hebat banget sinyalnya, ping 200ms terus, mantap!"** | ⚠️ **Positif** (Salah Deteksi) | ✅ **Negatif** (Akurat) | **LLM berhasil mendeteksi sarkasme**, sedangkan Lexicon gagal karena ada kata "Hebat" & "Mantap". |
 
 **Bukti Eksekusi Code:**
-![Hasil LLM](images/llm_sarcasm_detection.png)
+![Hasil LLM](image/llm_sarcasm_detection.png)
 
 > *Code eksperimen ini dapat dilihat pada file [`experiment_llm_labeling.py`](experiment_llm_labeling.py).*
 
